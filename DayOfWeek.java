@@ -3,26 +3,21 @@ import java.util.Scanner;
 public class DayOfWeek {
 
 	public static void main(String[] args) {
-        int day, month, initmonth, year;
-        boolean timeToQuit;
+        int day, month, year;
         Scanner sc = new Scanner(System.in);
-        timeToQuit = false;
+        boolean timeToQuit = false;
         while(!timeToQuit) {
-            System.out.println("Enter the Day(D/DD):");
+            System.out.println("Enter the Day:");
             String line=sc.nextLine();
             timeToQuit = line.equalsIgnoreCase("quit");
             if (!timeToQuit) {
                 day = Integer.parseInt(line);
 
-                //sc.nextLine();
-                System.out.println("Enter the Month(M/MM):");
+                System.out.println("Enter the Month:");
                 month = Integer.parseInt(sc.nextLine());
-                initmonth = month;
-                //sc.nextLine();
-                System.out.println("Enter the Year(YYYY):");
+                System.out.println("Enter the Year:");
                 year = Integer.parseInt(sc.nextLine());
 
-                //sc.nextLine();
                 if (month == 1 || month == 2) {
                     month += 12;
                     year -= 1;
@@ -30,46 +25,41 @@ public class DayOfWeek {
 
                 int a = (26 * (month + 1)) / 10;
                 int b = year / 4;
-                int c = 6 * (int) (year / 100);
-                //System.out.println("The c is :" + c);
-                //int c1 = 6 * (year / 100);
-                //System.out.println("The c1 is :" + c1);
+                int c = 6 * (year / 100);
                 int d = year / 400;
 
-                int res = (a + b + c + d + day + year) % 7;
+                int remainder = (a + b + c + d + day + year) % 7;
 
-                String resString;
+                String result;
 
-                switch (res) {
+                switch (remainder) {
                     case 0:
-                        resString = "Saturday";
+                    	result = "Saturday";
                         break;
                     case 1:
-                        resString = "Sunday";
+                    	result = "Sunday";
                         break;
                     case 2:
-                        resString = "Monday";
+                    	result = "Monday";
                         break;
                     case 3:
-                        resString = "Tuesday";
+                    	result = "Tuesday";
                         break;
                     case 4:
-                        resString = "Wednesday";
+                    	result = "Wednesday";
                         break;
                     case 5:
-                        resString = "Thursday";
+                    	result = "Thursday";
                         break;
                     case 6:
-                        resString = "Friday";
+                    	result = "Friday";
                         break;
                     default:
-                        resString = "Error";
+                    	result = "Error";
                         break;
                 }
 
-                System.out.println("The day of the date " + day + "-" + initmonth + "-"+ year +  " is :" + resString);
-            } else {
-                //System.out.println("Bye bye!!");
+                System.out.println("The day of the date is :" + result);
             }
         }
     }
