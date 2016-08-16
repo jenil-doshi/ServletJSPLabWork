@@ -1,2 +1,0 @@
-# ServletJSPLabWork
-Java Bootcamp
