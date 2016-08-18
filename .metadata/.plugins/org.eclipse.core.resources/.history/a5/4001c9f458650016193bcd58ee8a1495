@@ -1,0 +1,23 @@
+package Lab1;
+
+public class CheckingAccount extends Account{
+
+	public CheckingAccount(long balance, String holderName) {
+		super(balance, holderName);
+		this.balance = balance;
+		this.holderName = holderName;
+	}
+
+	@Override
+	public boolean deposit(long amount) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean withdraw(long amount) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

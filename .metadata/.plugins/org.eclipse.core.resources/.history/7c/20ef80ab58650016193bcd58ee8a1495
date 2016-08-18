@@ -1,0 +1,12 @@
+package Lab1;
+
+public class CheckingAccount extends Account{
+
+	public CheckingAccount(long balance, String holderName) {
+		super(balance, holderName);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+}

@@ -1,0 +1,6 @@
+package Lab1;
+
+public abstract class Account {
+	private long balance;
+	private String holderName;
+}

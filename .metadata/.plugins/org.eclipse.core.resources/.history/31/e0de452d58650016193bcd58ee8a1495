@@ -1,0 +1,27 @@
+package Lab1;
+
+public abstract class Account {
+	
+	private long balance;
+	private String holderName;
+	
+	public Account(String holderName) {
+		super();
+		this.holderName = holderName;
+	}
+	public final void executeTransaction(String message, long amount) {
+		System.out.println("Holder: " + holderName + " is performing operation: " + message + " on Amount: " + amount);
+		long balance = this.balance + amount;
+		this.balance = balance;
+	}
+
+	public long getBalance() {
+		return this.balance;
+	}
+
+	public abstract boolean deposit(long amount);
+
+	public abstract boolean withdraw(long amount);
+
+	
+}

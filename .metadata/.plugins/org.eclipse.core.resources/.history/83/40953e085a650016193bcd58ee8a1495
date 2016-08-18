@@ -1,0 +1,21 @@
+package Lab1;
+
+public class MortgageAccount extends Account{
+
+	public MortgageAccount(long balance, String holderName) {
+		super(balance, holderName);
+	}
+
+	@Override
+	public boolean deposit(long amount) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean withdraw(long amount) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
