@@ -1,0 +1,10 @@
+package Lab2;
+
+public class ExceptionHandler {
+
+	public enum MONTHS_OF_YEAR {
+		JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMER, DECEMEBER;
+	}
+
+	static int[] days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+}

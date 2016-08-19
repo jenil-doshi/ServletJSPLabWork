@@ -1,0 +1,24 @@
+package Lab2;
+
+public class ExceptionHandler {
+
+	public enum MONTHS_OF_YEAR {
+		JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMER, DECEMEBER;
+	}
+
+	static int[] days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	
+	public static boolean verify(String month, int day) throws BadMonth, BadDay {
+		boolean isValid = false;
+		try {
+			MONTHS_OF_YEAR mon = MONTHS_OF_YEAR.valueOf(month);
+			if (days[mon.ordinal()] != day) {
+				throw new BadDay("BadDay Exception. Please enter the valid number of days.");
+			}
+		} catch (Exception e) {
+			throw new BadMonth(e);
+		}
+		isValid = true;
+		return isValid;
+	}
+}
